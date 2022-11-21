@@ -1,0 +1,123 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background-color: antiquewhite;
+    background-size: cover;
+    background-position: center;
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menu-bar{
+    background: rgb(0, 100, 0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li 
+{
+    width: 130px;
+    margin: 10px;
+    padding: 10px;
+}
+.menu-bar ul li a 
+{
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li:hover 
+{
+    background: #2bab0d;
+    border-radius: 10px;
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 1000px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img-container{
+    height: 1000px;
+    width: 1200px;
+    position:relative;
+    float: left;
+
+}
+.sizeimg{
+    width: 600px;
+    position: sticky;
+    top: 180px;
+
+}
+
+.sub-menu-1 {
+    display: none;
+
+}
+.menu-bar ul li:hover .sub-menu-1 
+{
+    display: block;
+    position: absolute;
+    background: rgb(0,100,0);
+    margin-top: -2px;
+    margin-left: -10px; 
+
+}
+.menu-bar ul li:hover .sub-menu-1 ul 
+{
+    display: block;
+    margin: 15px;
+    
+}
+.menu-bar ul li:hover .sub-menu-1 ul li 
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background:transparent;
+    border-radius: 0;
+    text-align: left  ;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: rgb(80, 231, 15);
+}
